@@ -1,7 +1,7 @@
 const getCookies = require("next-cookies")
 const Prismic = require("prismic-javascript")
 
-const API_ENDPOINT = `endpoint-url`
+const API_ENDPOINT = `https://trlva.cdn.prismic.io/api/v2`
 
 const linkResolver = doc => {
   if (doc.type === "homepage") return "/"
