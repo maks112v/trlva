@@ -8,11 +8,11 @@ import SliceResolver from "../components/SliceResolver"
 export default function IndexPage({ doc: { data } }) {
   console.log(data)
   return (
-    <>
+    <div css={{ marginBottom: "150vh" }}>
       {data.body.map((element, index) => (
         <SliceResolver key={`slice-${index}`} {...element} />
       ))}
-    </>
+    </div>
   )
 }
 

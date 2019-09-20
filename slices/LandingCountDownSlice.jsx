@@ -1,3 +1,4 @@
+import React, { useState, useRef, useEffect } from "react"
 import { RichText } from "prismic-reactjs"
 import { colors } from "../components/Styles"
 import Countdown from "react-countdown-now"
@@ -50,6 +51,24 @@ const CountDown = ({
             },
           },
         }}>
+        <div css={{ alignSelf: "center" }}>
+          <h2
+            css={{
+              textAlign: "right",
+              fontWeight: "normal",
+              fontSize: 35,
+              lineHeight: 1.2,
+              margin: 0,
+              marginTop: 10,
+              marginRight: 20,
+              span: {
+                color: colors.text.light,
+              },
+            }}>
+            Count&nbsp;<span>Every&nbsp;Second</span>{" "}
+            Until&nbsp;the&nbsp;Conference
+          </h2>
+        </div>
         <div>
           <h3>{days}</h3>
           <h4>Days</h4>
@@ -75,6 +94,17 @@ const CountDown = ({
 }
 
 export default function LandingCountDownSlice({ primary, items, ...rest }) {
+  const [floating, setFloating] = useState(false)
+  const ref = useRef()
+
+  // useEffect(() => {
+  //   function handleScroll(e) {
+  //     setFloating(window.scrollY > 805)
+  //   }
+  //   handleScroll()
+  //   document.addEventListener("scroll", handleScroll, true)
+  //   return () => document.removeEventListener("scroll", handleScroll, true)
+  // }, [])
   return (
     <header
       css={{
@@ -114,9 +144,10 @@ export default function LandingCountDownSlice({ primary, items, ...rest }) {
         {RichText.render(primary.content)}
       </div>
       <div
+        ref={ref}
         css={{
-          position: "absolute",
-          top: "83vh",
+          position: floating ? "fixed" : "absolute",
+          top: floating ? 0 : "83vh",
           zIndex: 1000,
           right: 0,
           left: 0,
@@ -125,9 +156,11 @@ export default function LandingCountDownSlice({ primary, items, ...rest }) {
           css={{
             backgroundColor: colors.accent,
             margin: "0 auto",
-            borderRadius: 20,
-            width: "min-content",
+            borderRadius: floating ? 0 : 20,
+            width: floating ? "calc(100vw)" : "min-content",
             padding: "20px 50px 30px",
+            boxShadow: "0 15px 38px 10px rgba(0,0,0,0.1 )",
+            transition: "200ms",
           }}>
           <Countdown
             date={primary.start_date}
