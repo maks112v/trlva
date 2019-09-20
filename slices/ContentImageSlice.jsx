@@ -35,12 +35,12 @@ export default function ContentImageSlice({ primary, items }) {
         <h2
           css={{
             margin: 0,
-            marginTop: -50,
+            marginTop: -80,
             marginLeft: -30,
             position: "absolute",
-            fontSize: 70,
+            fontSize: 120,
             color: colors.text.dark,
-            opacity: 0.2,
+            opacity: 0.1,
           }}>
           {RichText.asText(primary.accent_title)}
         </h2>
