@@ -21,6 +21,7 @@ export default class extends Document {
           <link rel="stylesheet" href="/static/normalize.css" />
           <link rel="stylesheet" href="/static/outdatedbrowser/outdatedbrowser.css" />
           <script src="https://cdn.polyfill.io/v2/polyfill.min.js" />
+          <link rel="stylesheet" href="animate.min.css" />
         </Head>
         <body>
           <div id="outdated" />
