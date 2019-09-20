@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "name": "website-title",
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }],
+  "routes": [{ "src": "/", "dest": "/" }]
+}
