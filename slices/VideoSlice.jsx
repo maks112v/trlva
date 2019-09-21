@@ -16,7 +16,10 @@ export default function VideoSlice({ primary, items }) {
       }}>
       <div
         css={{
-          background: `url(${primary.image.url})`,
+          background: `linear-gradient(
+            rgba(0, 0, 0, 0.1), 
+            rgba(0, 0, 0, 0.1)
+          ), url(${primary.image.url})`,
           width: "100%",
           paddingTop: "50%",
           borderRadius: 30,
