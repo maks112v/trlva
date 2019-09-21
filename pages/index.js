@@ -8,7 +8,7 @@ import SliceResolver from "../components/SliceResolver"
 export default function IndexPage({ doc: { data } }) {
   console.log(data)
   return (
-    <div>
+    <div css={{ overflowX: "hidden" }}>
       {data.body.map((element, index) => (
         <SliceResolver key={`slice-${index}`} {...element} />
       ))}
