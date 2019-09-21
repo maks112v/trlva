@@ -12,7 +12,7 @@ export default function Footer() {
         src="/static/bottom_accent.svg"
         css={{
           position: "absolute",
-          top: 0,
+          top: -3,
           right: -3,
           left: -3,
           width: "110%",
