@@ -1,5 +1,5 @@
 import { RichText } from "prismic-reactjs"
-import { colors } from "../components/Styles"
+import { colors, breakingPoints } from "../components/Styles"
 
 export default function ScheduleSlice({ primary, items }) {
   return (
@@ -28,6 +28,17 @@ export default function ScheduleSlice({ primary, items }) {
               maxWidth: 600,
               opacity: 0.7,
             },
+            [breakingPoints.md]: {
+              order: 2,
+              marginLeft: 0,
+              marginTop: 0,
+              h3: {
+                fontSize: 25,
+              },
+              p: {
+                fontSize: 20,
+              },
+            },
           }}>
           <h2
             css={{
@@ -38,6 +49,11 @@ export default function ScheduleSlice({ primary, items }) {
               fontSize: 120,
               color: colors.text.dark,
               opacity: 0.1,
+              [breakingPoints.md]: {
+                fontSize: 60,
+                marginTop: -40,
+                marginLeft: -10,
+              },
             }}>
             {RichText.asText(primary.accent_text)}
           </h2>

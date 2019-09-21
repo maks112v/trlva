@@ -1,6 +1,7 @@
 import React from "react"
 import Head from "next/head"
 import { RichText } from "prismic-reactjs"
+import { colors } from "./Styles"
 
 export default function Seo({ data }) {
   const url = "url"
@@ -31,6 +32,7 @@ export default function Seo({ data }) {
       {desc && <meta name="twitter:description" content={desc} key="tw:desc" />}
       {image && <meta name="twitter:image" content={image} key="tw:image" />}
       <meta name="twitter:card" content="summary_large_image" key="tw:card" />
+      <meta name="theme-color" content={colors.accent} />
     </Head>
   )
 }
