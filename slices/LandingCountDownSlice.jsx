@@ -140,6 +140,9 @@ export default function LandingCountDownSlice({ primary, items, ...rest }) {
         backgroundSize: "cover",
         minHeight: "100vh",
         position: "relative",
+        [breakingPoints.md]: {
+          minHeight: "90vh !important",
+        },
       }}>
       <div
         css={{
@@ -165,6 +168,7 @@ export default function LandingCountDownSlice({ primary, items, ...rest }) {
             color: colors.text.light,
           },
           [breakingPoints.md]: {
+            height: "90vh !important",
             h1: {
               fontSize: "2.5rem",
             },
@@ -186,7 +190,7 @@ export default function LandingCountDownSlice({ primary, items, ...rest }) {
           right: 0,
           left: 0,
           [breakingPoints.md]: {
-            bottom: 10,
+            bottom: -30,
           },
         }}>
         <div
