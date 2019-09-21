@@ -26,6 +26,7 @@ export default function ScheduleSlice({ primary, items }) {
               fontWeight: 300,
               fontSize: 20,
               maxWidth: 600,
+              opacity: 0.7,
             },
           }}>
           <h2

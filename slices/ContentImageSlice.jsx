@@ -1,5 +1,5 @@
 import { RichText } from "prismic-reactjs"
-import { colors } from "../components/Styles"
+import { colors, breakingPoints } from "../components/Styles"
 
 export default function ContentImageSlice({ primary, items }) {
   return (
@@ -13,6 +13,13 @@ export default function ContentImageSlice({ primary, items }) {
         alignItems: "center",
         ">div": {
           width: "48%",
+        },
+        [breakingPoints.md]: {
+          margin: "100px auto",
+          flexDirection: "column",
+          ">div": {
+            width: "100%",
+          },
         },
       }}>
       <div
@@ -30,6 +37,18 @@ export default function ContentImageSlice({ primary, items }) {
             margin: 0,
             fontWeight: 300,
             fontSize: 20,
+            opacity: 0.7,
+          },
+          [breakingPoints.md]: {
+            order: 2,
+            marginLeft: 0,
+            marginTop: 0,
+            h3: {
+              fontSize: 25,
+            },
+            p: {
+              fontSize: 20,
+            },
           },
         }}>
         <h2
@@ -41,12 +60,23 @@ export default function ContentImageSlice({ primary, items }) {
             fontSize: 120,
             color: colors.text.dark,
             opacity: 0.1,
+            [breakingPoints.md]: {
+              fontSize: 60,
+              marginTop: -40,
+              marginLeft: -10,
+            },
           }}>
           {RichText.asText(primary.accent_title)}
         </h2>
         {RichText.render(primary.content)}
       </div>
-      <div>
+      <div
+        css={{
+          [breakingPoints.md]: {
+            order: 1,
+            marginBottom: 75,
+          },
+        }}>
         <img
           src={primary.image.url}
           css={{
