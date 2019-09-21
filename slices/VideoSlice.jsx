@@ -27,7 +27,7 @@ export default function VideoSlice({ primary, items }) {
             paddingTop: "75%",
           },
           [breakingPoints.sm]: {
-            paddingTop: "100%",
+            paddingTop: 450,
           },
         }}>
         <div
@@ -41,8 +41,7 @@ export default function VideoSlice({ primary, items }) {
             alignItems: "center",
             justifyContent: "center",
             [breakingPoints.sm]: {
-              bottom: 50,
-              alignItems: "flex-end",
+              top: 100,
             },
           }}>
           <button
