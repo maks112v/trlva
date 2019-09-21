@@ -134,7 +134,7 @@ export default function LandingCountDownSlice({ primary, items, ...rest }) {
       <div
         css={{
           position: "absolute",
-          top: "83vh",
+          bottom: 25,
           zIndex: 1000,
           right: 0,
           left: 0,

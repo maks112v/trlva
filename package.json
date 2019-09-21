@@ -14,11 +14,14 @@
     "react": "^16.8.6",
     "react-animations": "^1.0.0",
     "react-countdown-now": "^2.1.1",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-icons": "^3.7.0",
+    "react-images": "^1.0.0"
   },
   "devDependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.7",
     "babel-plugin-emotion": "^10.0.7",
+    "fslightbox-react": "^1.4.0",
     "prettier": "^1.16.4"
   },
   "scripts": {

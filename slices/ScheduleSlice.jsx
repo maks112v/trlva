@@ -8,7 +8,7 @@ export default function ScheduleSlice({ primary, items }) {
         css={{
           maxWidth: 1240,
           padding: "100px 20px 50px",
-          margin: "150px auto",
+          margin: "100px auto",
         }}>
         <div
           css={{
