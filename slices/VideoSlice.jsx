@@ -22,6 +22,7 @@ export default function VideoSlice({ primary, items }) {
           borderRadius: 30,
           boxShadow: "0 15px 38px 10px rgba(0,0,0,0.1 )",
           backgroundSize: "cover",
+          backgroundPosition: "center",
           position: "relative",
           [breakingPoints.lg]: {
             paddingTop: "75%",
