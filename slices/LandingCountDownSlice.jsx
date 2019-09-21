@@ -1,5 +1,5 @@
 import { RichText } from "prismic-reactjs"
-import { colors } from "../components/Styles"
+import { colors, breakingPoints } from "../components/Styles"
 import Countdown from "react-countdown-now"
 
 const CountDown = ({
@@ -45,12 +45,31 @@ const CountDown = ({
               color: colors.text.dark,
               fontWeight: "normal",
             },
-            ":not(:last-child)": {
-              marginRight: 20,
+            [breakingPoints.lg]: {
+              h3: {
+                fontSize: 40,
+              },
+              h4: {
+                fontSize: 25,
+              },
+            },
+            [breakingPoints.md]: {
+              h3: {
+                fontSize: 35,
+              },
+              h4: {
+                fontSize: 18,
+              },
             },
           },
         }}>
-        <div css={{ alignSelf: "center" }}>
+        <div
+          css={{
+            alignSelf: "center",
+            [breakingPoints.md]: {
+              display: "none !important",
+            },
+          }}>
           <h2
             css={{
               textAlign: "right",
@@ -63,6 +82,9 @@ const CountDown = ({
               span: {
                 color: colors.text.light,
               },
+              [breakingPoints.lg]: {
+                fontSize: 24,
+              },
             }}>
             Count&nbsp;<span>Every&nbsp;Second</span>{" "}
             Until&nbsp;the&nbsp;Conference
@@ -72,18 +94,32 @@ const CountDown = ({
           <h3>{days}</h3>
           <h4>Days</h4>
         </div>
-        <div css={{ fontSize: 55 }}>:</div>
+        <div css={{ fontSize: 55, margin: "0 20px" }}>:</div>
         <div>
           <h3>{hours}</h3>
           <h4>Hours</h4>
         </div>{" "}
-        <div css={{ fontSize: 55 }}>:</div>
+        <div css={{ fontSize: 55, margin: "0 20px" }}>:</div>
         <div>
           <h3>{minutes}</h3>
           <h4>Minutes</h4>
         </div>
-        <div css={{ fontSize: 55 }}>:</div>
-        <div>
+        <div
+          css={{
+            fontSize: 55,
+            margin: "0 20px",
+            [breakingPoints.sm]: {
+              display: "none !important",
+            },
+          }}>
+          :
+        </div>
+        <div
+          css={{
+            [breakingPoints.sm]: {
+              display: "none !important",
+            },
+          }}>
           <h3>{seconds}</h3>
           <h4>Seconds</h4>
         </div>
@@ -128,6 +164,17 @@ export default function LandingCountDownSlice({ primary, items, ...rest }) {
             maxWidth: 600,
             color: colors.text.light,
           },
+          [breakingPoints.md]: {
+            h1: {
+              fontSize: "2.5rem",
+            },
+            h4: {
+              fontSize: "1.8rem",
+            },
+            p: {
+              fontSize: "1.4rem",
+            },
+          },
         }}>
         {RichText.render(primary.content)}
       </div>
@@ -138,6 +185,9 @@ export default function LandingCountDownSlice({ primary, items, ...rest }) {
           zIndex: 1000,
           right: 0,
           left: 0,
+          [breakingPoints.md]: {
+            bottom: 10,
+          },
         }}>
         <div
           css={{
@@ -148,6 +198,9 @@ export default function LandingCountDownSlice({ primary, items, ...rest }) {
             padding: "20px 50px 30px",
             boxShadow: "0 15px 38px 10px rgba(0,0,0,0.1 )",
             transition: "200ms",
+            [breakingPoints.lg]: {
+              padding: "20px 25px 30px",
+            },
           }}>
           <Countdown
             date={primary.start_date}
@@ -161,7 +214,13 @@ export default function LandingCountDownSlice({ primary, items, ...rest }) {
         </div>
       </div>
       <img
-        css={{ position: "absolute", bottom: 0, right: 0 }}
+        css={{
+          position: "absolute",
+          bottom: -3,
+          right: 0,
+          left: 0,
+          width: "100%",
+        }}
         src="/static/accent.svg"></img>
     </header>
   )
