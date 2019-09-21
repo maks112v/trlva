@@ -2,6 +2,8 @@ import { Global, css } from "@emotion/core"
 
 export const colors = {
   accent: "#FFC107",
+  dark: "#212121",
+
   text: {
     light: "#fff",
     dark: "#212121",

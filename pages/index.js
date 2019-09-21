@@ -4,6 +4,7 @@ import { RichText } from "prismic-reactjs"
 import { linkResolver, getPrismicApi } from "../prismic"
 
 import SliceResolver from "../components/SliceResolver"
+import Footer from "../components/Footer"
 
 export default function IndexPage({ doc: { data } }) {
   console.log(data)
@@ -12,6 +13,7 @@ export default function IndexPage({ doc: { data } }) {
       {data.body.map((element, index) => (
         <SliceResolver key={`slice-${index}`} {...element} />
       ))}
+      <Footer />
     </div>
   )
 }
