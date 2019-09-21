@@ -58,6 +58,10 @@ export default function VideoSlice({ primary, items }) {
               outline: "none",
               border: "none",
               cursor: "pointer",
+              [breakingPoints.sm]: {
+                height: 60,
+                width: 60,
+              },
             }}>
             <FiPlay color={colors.text.dark} size="25px" />
           </button>

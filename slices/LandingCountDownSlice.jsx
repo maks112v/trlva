@@ -138,6 +138,7 @@ export default function LandingCountDownSlice({ primary, items, ...rest }) {
           rgba(0, 0, 0, 0.4)
         ), url(${primary.image.url})`,
         backgroundSize: "cover",
+        backgroundPosition: "center",
         minHeight: "100vh",
         position: "relative",
         [breakingPoints.md]: {
