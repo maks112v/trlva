@@ -222,9 +222,9 @@ export default function LandingCountDownSlice({ primary, items, ...rest }) {
         css={{
           position: "absolute",
           bottom: -3,
-          right: 0,
-          left: 0,
-          width: "100%",
+          right: -3,
+          left: -3,
+          width: "105%",
         }}
         src="/static/accent.svg"></img>
     </header>

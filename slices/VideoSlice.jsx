@@ -17,8 +17,8 @@ export default function VideoSlice({ primary, items }) {
       <div
         css={{
           background: `linear-gradient(
-            rgba(0, 0, 0, 0.1), 
-            rgba(0, 0, 0, 0.1)
+            rgba(0, 0, 0, 0.2), 
+            rgba(0, 0, 0, 0.2)
           ), url(${primary.image.url})`,
           width: "100%",
           paddingTop: "50%",
@@ -107,7 +107,7 @@ export default function VideoSlice({ primary, items }) {
                 position: "absolute",
                 fontSize: 120,
                 color: colors.text.light,
-                opacity: 0.1,
+                opacity: 0.2,
                 [breakingPoints.md]: {
                   fontSize: 50,
                   marginTop: -30,
