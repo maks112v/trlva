@@ -59,7 +59,8 @@ export default function GallerySlice({ primary, items }) {
         </h2>
         {RichText.render(primary.content)}
       </div>
-      <div css={{ display: "flex", margin: "25px auto", flexWrap: "wrap" }}>
+      <div
+        css={{ display: "flex", margin: "25px auto 50px", flexWrap: "wrap" }}>
         {items.slice(0, 8).map(item => (
           <div
             css={{
@@ -77,13 +78,22 @@ export default function GallerySlice({ primary, items }) {
               css={{
                 width: "100%",
                 borderRadius: 20,
+
                 boxShadow: "0 15px 38px 10px rgba(0,0,0,0.1 )",
               }}
             />
           </div>
         ))}
       </div>
-      <Button text="View" />
+      {primary.button_link ? (
+        <div css={{ textAlign: "center" }}>
+          <Button
+            text={RichText.asText(primary.button_text)}
+            link={primary.button_link}
+            glow
+          />
+        </div>
+      ) : null}
     </section>
   )
 }
