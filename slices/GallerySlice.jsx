@@ -1,5 +1,6 @@
 import { colors, breakingPoints } from "../components/Styles"
 import { RichText } from "prismic-reactjs"
+import Button from "../components/Button"
 
 export default function GallerySlice({ primary, items }) {
   return (
@@ -58,7 +59,7 @@ export default function GallerySlice({ primary, items }) {
         </h2>
         {RichText.render(primary.content)}
       </div>
-      <div css={{ display: "flex", flexWrap: "wrap" }}>
+      <div css={{ display: "flex", margin: "25px auto", flexWrap: "wrap" }}>
         {items.slice(0, 8).map(item => (
           <div
             css={{
@@ -73,11 +74,16 @@ export default function GallerySlice({ primary, items }) {
             }}>
             <img
               src={item.image.url}
-              css={{ width: "100%", borderRadius: 20 }}
+              css={{
+                width: "100%",
+                borderRadius: 20,
+                boxShadow: "0 15px 38px 10px rgba(0,0,0,0.1 )",
+              }}
             />
           </div>
         ))}
       </div>
+      <Button text="View" />
     </section>
   )
 }
