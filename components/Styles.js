@@ -31,6 +31,16 @@ export default function Styles() {
         body {
           font-family: "Rubik", sans-serif;
         }
+
+        a {
+          color: ${colors.text.accent};
+          opacity: 0.8;
+          transition: 200ms;
+          cursor: pointer;
+          &:hover {
+            opacity: 1;
+          }
+        }
       `}
     />
   )
