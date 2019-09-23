@@ -1,13 +1,12 @@
-import { colors, breakingPoints } from "../components/Styles"
 import { RichText } from "prismic-reactjs"
-import Button from "../components/Button"
+import { colors, breakingPoints } from "../components/Styles"
 
-export default function GallerySlice({ primary, items }) {
+export default function SpeakersSlice({ primary, items }) {
   return (
     <section
       css={{
         maxWidth: 1240,
-        padding: "50px 20px",
+        padding: "100px 20px 50px",
         margin: "100px auto",
       }}>
       <div
@@ -59,40 +58,26 @@ export default function GallerySlice({ primary, items }) {
         </h2>
         {RichText.render(primary.content)}
       </div>
-      <div
-        css={{ display: "flex", margin: "25px auto 50px", flexWrap: "wrap" }}>
-        {items.slice(0, 8).map(item => (
-          <div
-            css={{
-              padding: 10,
-              width: "25%",
-              [breakingPoints.md]: {
-                width: "50%",
-              },
-              [breakingPoints.sm]: {
-                width: "100%",
-              },
-            }}>
+      <div css={{ display: "flex", margin: "50px 0" }}>
+        {items.map(item => (
+          <div css={{ width: "24%", textAlign: "center" }}>
             <img
-              src={item.image.url}
               css={{
-                width: "100%",
-                borderRadius: 20,
+                width: 200,
+                borderRadius: "50%",
                 boxShadow: "0 15px 38px 10px rgba(0,0,0,0.1 )",
               }}
-            />
+              src={item.image.url}></img>
+            <h3 css={{ fontSize: 30, fontWeight: 500, margin: "10px 0" }}>
+              {RichText.asText(item.name)}
+            </h3>
+            <h4
+              css={{ fontSize: 20, fontWeight: 400, opacity: 0.6, margin: 0 }}>
+              {RichText.asText(item.location)}
+            </h4>
           </div>
         ))}
       </div>
-      {primary.button_link ? (
-        <div css={{ textAlign: "center" }}>
-          <Button
-            text={RichText.asText(primary.button_text)}
-            link={primary.button_link}
-            glow
-          />
-        </div>
-      ) : null}
     </section>
   )
 }
