@@ -4,9 +4,9 @@ import { RichText } from "prismic-reactjs"
 import { colors } from "./Styles"
 
 export default function Seo({ data }) {
-  const url = "url"
-  const author = "author"
-  const handle = "@handle"
+  const url = "https://trlva.com"
+  const author = "Relay Marketing Agency"
+  const handle = "@relayma"
 
   const title = RichText.asText(data.title)
   const desc = RichText.asText(data.description)
