@@ -58,16 +58,34 @@ export default function SpeakersSlice({ primary, items }) {
         </h2>
         {RichText.render(primary.content)}
       </div>
-      <div css={{ display: "flex", margin: "50px 0" }}>
+      <div
+        css={{
+          display: "flex",
+          flexWrap: "wrap",
+          margin: "50px 0",
+        }}>
         {items.map(item => (
-          <div css={{ width: "24%", textAlign: "center" }}>
-            <img
-              css={{
-                width: 200,
-                borderRadius: "50%",
-                boxShadow: "0 15px 38px 10px rgba(0,0,0,0.1 )",
-              }}
-              src={item.image.url}></img>
+          <div
+            css={{
+              width: "33%",
+              textAlign: "center",
+              margin: "10px 0 40px",
+              [breakingPoints.md]: {
+                width: "50%",
+              },
+              [breakingPoints.sm]: {
+                width: "100%",
+              },
+            }}>
+            <div css={{ padding: "0 50px", maxWidth: 300, margin: "0 auto" }}>
+              <img
+                css={{
+                  width: "100%",
+                  borderRadius: "50%",
+                  boxShadow: "0 15px 38px 10px rgba(0,0,0,0.1 )",
+                }}
+                src={item.image.url}></img>
+            </div>
             <h3 css={{ fontSize: 30, fontWeight: 500, margin: "10px 0" }}>
               {RichText.asText(item.name)}
             </h3>
