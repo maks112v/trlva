@@ -1,4 +1,4 @@
-import { colors, breakingPoints } from "./Styles"
+import { colors, breakingPoints, icons } from "./Styles"
 import { RichText } from "prismic-reactjs"
 
 export default function Footer({ footerData: { data } }) {
@@ -107,7 +107,29 @@ export default function Footer({ footerData: { data } }) {
             ))}
           </div>
           <div css={{ display: "flex", flexDirection: "column" }}>
-            <h3>Find Us</h3>
+            <h3>{RichText.asText(data.social_title)}</h3>
+            {data.social_links.map(item => {
+              const Icon = icons[item.icon]
+              return (
+                <a
+                  target="_blank"
+                  href={item.link.url}
+                  css={{
+                    backgroundColor: colors.accent,
+                    padding: "10px 20px",
+                    opacity: 1,
+                    borderRadius: 30,
+                    display: "flex",
+                    alignItems: "center",
+                    color: colors.text.dark,
+                    maxWidth: 300,
+                  }}
+                  target={item.target}>
+                  <Icon size="25px" css={{ marginRight: 10 }} />
+                  {RichText.asText(item.text)}
+                </a>
+              )
+            })}
           </div>
         </div>
         <div css={{ textAlign: "center", opacity: 0.6 }}>

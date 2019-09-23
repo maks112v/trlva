@@ -1,4 +1,11 @@
 import { Global, css } from "@emotion/core"
+import {
+  FiInstagram,
+  FiMap,
+  FiTwitter,
+  FiFacebook,
+  FiGlobe,
+} from "react-icons/fi"
 
 export const colors = {
   accent: "#FFC107",
@@ -9,6 +16,14 @@ export const colors = {
     dark: "#212121",
     accent: "#FFC107",
   },
+}
+
+export const icons = {
+  Instagram: FiInstagram,
+  Map: FiMap,
+  Twitter: FiTwitter,
+  Facebook: FiFacebook,
+  Globe: FiGlobe,
 }
 
 export const breakingPoints = {
