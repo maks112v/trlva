@@ -12,7 +12,7 @@ export default function VideoSlice({ primary, items }) {
       css={{
         maxWidth: 1240,
         padding: "100px 20px 50px",
-        margin: "100px auto",
+        margin: "0px auto",
       }}>
       <div
         css={{
