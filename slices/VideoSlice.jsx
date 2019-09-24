@@ -11,8 +11,8 @@ export default function VideoSlice({ primary, items }) {
     <section
       css={{
         maxWidth: 1240,
-        padding: "100px 20px 50px",
-        margin: "0px auto",
+        padding: "0px 20px",
+        margin: "150px auto",
       }}>
       <div
         css={{
@@ -86,6 +86,7 @@ export default function VideoSlice({ primary, items }) {
                 margin: 0,
                 fontWeight: 300,
                 fontSize: 20,
+                maxWidth: 600,
               },
               [breakingPoints.md]: {
                 order: 2,
@@ -108,6 +109,7 @@ export default function VideoSlice({ primary, items }) {
                 fontSize: 120,
                 color: colors.text.light,
                 opacity: 0.2,
+                whiteSpace: "nowrap",
                 [breakingPoints.md]: {
                   fontSize: 50,
                   marginTop: -30,

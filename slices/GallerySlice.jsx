@@ -7,8 +7,8 @@ export default function GallerySlice({ primary, items }) {
     <section
       css={{
         maxWidth: 1240,
-        padding: "50px 20px",
-        margin: "100px auto",
+        padding: "0 20px",
+        margin: "150px auto",
       }}>
       <div
         css={{

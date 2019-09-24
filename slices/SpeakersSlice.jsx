@@ -6,8 +6,8 @@ export default function SpeakersSlice({ primary, items }) {
     <section
       css={{
         maxWidth: 1240,
-        padding: "100px 20px 50px",
-        margin: "0px auto",
+        padding: "0 20px",
+        margin: "150px auto",
       }}>
       <div
         css={{
