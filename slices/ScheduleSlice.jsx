@@ -1,7 +1,9 @@
+import React, { useState } from "react"
 import { RichText } from "prismic-reactjs"
 import { colors, breakingPoints } from "../components/Styles"
 
 export default function ScheduleSlice({ primary, items }) {
+  const [activeTab, setactiveTab] = useState(0)
   return (
     <div css={{ backgroundColor: "#F3F3F3" }}>
       <section
@@ -58,6 +60,32 @@ export default function ScheduleSlice({ primary, items }) {
             {RichText.asText(primary.accent_text)}
           </h2>
           {RichText.render(primary.content)}
+        </div>
+        <div>
+          <div
+            css={{
+              display: "flex",
+              justifyContent: "space-around",
+              div: {
+                textAlign: "center",
+                width: "100%",
+                borderBottom: `2px solid ${colors.dark}`,
+                h3: {
+                  fontSize: 33,
+                  fontWeight: 400,
+                },
+              },
+            }}>
+            <div css={{ borderBottomColor: activeTab ? colors.accent : "" }}>
+              <h3>Thursday</h3>
+            </div>
+            <div>
+              <h3>Friday</h3>
+            </div>
+            <div>
+              <h3>Saturday</h3>
+            </div>
+          </div>
         </div>
       </section>
     </div>

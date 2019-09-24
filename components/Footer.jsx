@@ -2,7 +2,6 @@ import { colors, breakingPoints, icons } from "./Styles"
 import { RichText } from "prismic-reactjs"
 
 export default function Footer({ footerData: { data } }) {
-  console.log(data)
   return (
     <footer
       css={{
@@ -92,26 +91,33 @@ export default function Footer({ footerData: { data } }) {
           </div>
           <div css={{ display: "flex", flexDirection: "column" }}>
             <h3>{RichText.asText(data.link_group_1_title)}</h3>
-            {data.links_1.map(item => (
-              <a href={item.link.url} target={item.target}>
+            {data.links_1.map((item, index) => (
+              <a
+                key={`${data.link_group_1_title}-${index}`}
+                href={item.link.url}
+                target={item.target}>
                 {RichText.asText(item.text)}
               </a>
             ))}
           </div>
           <div css={{ display: "flex", flexDirection: "column" }}>
             <h3>{RichText.asText(data.link_group_2_title)}</h3>
-            {data.links_2.map(item => (
-              <a href={item.link.url} target={item.target}>
+            {data.links_2.map((item, index) => (
+              <a
+                key={`${data.link_group_2_title}-${index}`}
+                href={item.link.url}
+                target={item.target}>
                 {RichText.asText(item.text)}
               </a>
             ))}
           </div>
           <div css={{ display: "flex", flexDirection: "column" }}>
             <h3>{RichText.asText(data.social_title)}</h3>
-            {data.social_links.map(item => {
+            {data.social_links.map((item, index) => {
               const Icon = icons[item.icon]
               return (
                 <a
+                  key={`social-${index}`}
                   target="_blank"
                   href={item.link.url}
                   css={{

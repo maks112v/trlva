@@ -61,8 +61,9 @@ export default function GallerySlice({ primary, items }) {
       </div>
       <div
         css={{ display: "flex", margin: "25px auto 50px", flexWrap: "wrap" }}>
-        {items.slice(0, 8).map(item => (
+        {items.slice(0, 8).map((item, index) => (
           <div
+            key={`image-${index}`}
             css={{
               padding: 10,
               width: "25%",
