@@ -25,7 +25,7 @@ export default function Button({ text, link, glow, type = "default" }) {
           backgroundColor: styles[type].textColor,
           color: "white",
           border: `2px solid ${styles[type].textColor}`,
-          boxShadow: glow && `0px 11px 29px 0px rgba(255,193,7,0.45)`,
+          boxShadow: glow && `0px 11px 29px 0px rgba(3,169,244,.2)`,
         },
       }}>
       {text}

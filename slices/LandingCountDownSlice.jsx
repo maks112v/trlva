@@ -1,6 +1,7 @@
 import { RichText } from "prismic-reactjs"
 import { colors, breakingPoints } from "../components/Styles"
 import Countdown from "react-countdown-now"
+import moment from "moment"
 
 const CountDown = ({
   days,
@@ -129,6 +130,7 @@ const CountDown = ({
 }
 
 export default function LandingCountDownSlice({ primary, items, ...rest }) {
+  console.log(moment(primary.start_date).toDate())
   return (
     <header
       css={{
@@ -208,7 +210,7 @@ export default function LandingCountDownSlice({ primary, items, ...rest }) {
             },
           }}>
           <Countdown
-            date={primary.start_date}
+            date={moment(primary.start_date).toDate()}
             renderer={props => (
               <CountDown
                 {...props}

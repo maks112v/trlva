@@ -67,23 +67,49 @@ export default function ScheduleSlice({ primary, items }) {
               display: "flex",
               justifyContent: "space-around",
               div: {
+                cursor: "pointer",
                 textAlign: "center",
-                width: "100%",
-                borderBottom: `2px solid ${colors.dark}`,
+                width: "32%",
                 h3: {
                   fontSize: 33,
                   fontWeight: 400,
+                  marginBottom: 0,
+                },
+                p: {
+                  margin: "10px 0",
+                  opacity: 0.6,
                 },
               },
             }}>
-            <div css={{ borderBottomColor: activeTab ? colors.accent : "" }}>
+            <div
+              onClick={() => setactiveTab(0)}
+              css={{
+                borderBottom: `2px solid ${
+                  activeTab === 0 ? colors.accent : colors.dark
+                }`,
+              }}>
               <h3>Thursday</h3>
+              <p>Nov 28, 2019</p>
             </div>
-            <div>
+            <div
+              onClick={() => setactiveTab(1)}
+              css={{
+                borderBottom: `2px solid ${
+                  activeTab === 1 ? colors.accent : colors.dark
+                }`,
+              }}>
               <h3>Friday</h3>
+              <p>Nov 29, 2019</p>
             </div>
-            <div>
+            <div
+              onClick={() => setactiveTab(2)}
+              css={{
+                borderBottom: `2px solid ${
+                  activeTab === 2 ? colors.accent : colors.dark
+                }`,
+              }}>
               <h3>Saturday</h3>
+              <p>Nov 30, 2019</p>
             </div>
           </div>
         </div>
