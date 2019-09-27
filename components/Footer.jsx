@@ -127,7 +127,7 @@ export default function Footer({ footerData: { data } }) {
                     borderRadius: 30,
                     display: "flex",
                     alignItems: "center",
-                    color: colors.text.dark,
+                    color: colors.text.light,
                     maxWidth: 300,
                   }}
                   target={item.target}>
