@@ -15,7 +15,7 @@ export default function ContentImageSlice({ primary, items }) {
           width: "48%",
         },
         [breakingPoints.md]: {
-          margin: "100px auto",
+          margin: "150px auto 100px",
           flexDirection: "column",
           ">div": {
             width: "100%",
