@@ -180,6 +180,7 @@ export default function ScheduleSlice({ primary, items, schedule }) {
                         backgroundColor: "black",
                         margin: "0 20px",
                         opacity: 0.5,
+                        minWidth: 30,
                       }}
                     />
                     <p>
