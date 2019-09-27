@@ -86,7 +86,7 @@ export default function Footer({ footerData: { data } }) {
                 },
               },
             }}>
-            <h1>Logo</h1>
+            <img src={data.logo.url} css={{ height: 100 }} />
             {RichText.render(data.content)}
           </div>
           <div css={{ display: "flex", flexDirection: "column" }}>
