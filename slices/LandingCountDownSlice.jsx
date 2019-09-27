@@ -130,7 +130,6 @@ const CountDown = ({
 }
 
 export default function LandingCountDownSlice({ primary, items, ...rest }) {
-  console.log(moment(primary.start_date).toDate())
   return (
     <header
       css={{
@@ -138,13 +137,13 @@ export default function LandingCountDownSlice({ primary, items, ...rest }) {
         background: `linear-gradient(
           rgba(0, 0, 0, 0.4), 
           rgba(0, 0, 0, 0.4)
-        ), url(${primary.image.url})`,
+        ), url(${primary.image.url}), url(/static/background.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         minHeight: "100vh",
         position: "relative",
         [breakingPoints.md]: {
-          minHeight: "85vh !important",
+          minHeight: "90vh !important",
         },
       }}>
       <div
@@ -171,7 +170,7 @@ export default function LandingCountDownSlice({ primary, items, ...rest }) {
             color: colors.text.light,
           },
           [breakingPoints.md]: {
-            height: "85vh !important",
+            height: "90vh !important",
             h1: {
               fontSize: "2.5rem",
             },
