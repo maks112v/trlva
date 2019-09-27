@@ -2,6 +2,11 @@ import React from "react"
 import App, { Container } from "next/app"
 import Styles from "../components/Styles"
 import { getPrismicApi } from "../prismic"
+import * as Sentry from "@sentry/browser"
+
+Sentry.init({
+  dsn: "https://c90a59b8169f427f8fe57199be384ed0@sentry.io/1763165",
+})
 
 export default class extends App {
   static async getInitialProps({ Component, ctx }) {
