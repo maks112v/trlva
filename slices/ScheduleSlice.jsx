@@ -1,8 +1,10 @@
 import React, { useState } from "react"
 import { RichText } from "prismic-reactjs"
 import { colors, breakingPoints } from "../components/Styles"
+import moment from "moment"
 
-export default function ScheduleSlice({ primary, items }) {
+export default function ScheduleSlice({ primary, items, schedule }) {
+  console.log(schedule)
   const [activeTab, setactiveTab] = useState(0)
   return (
     <div css={{ backgroundColor: "#F3F3F3" }}>
@@ -66,6 +68,7 @@ export default function ScheduleSlice({ primary, items }) {
             css={{
               display: "flex",
               justifyContent: "space-around",
+              marginBottom: 50,
               div: {
                 cursor: "pointer",
                 textAlign: "center",
@@ -74,10 +77,17 @@ export default function ScheduleSlice({ primary, items }) {
                   fontSize: 33,
                   fontWeight: 400,
                   marginBottom: 0,
+                  [breakingPoints.md]: {
+                    fontSize: 20,
+                  },
                 },
                 p: {
                   margin: "10px 0",
                   opacity: 0.6,
+                  fontSize: 18,
+                  [breakingPoints.md]: {
+                    fontSize: 15,
+                  },
                 },
               },
             }}>
@@ -111,6 +121,106 @@ export default function ScheduleSlice({ primary, items }) {
               <h3>Saturday</h3>
               <p>Nov 30, 2019</p>
             </div>
+          </div>
+          <div
+            css={{
+              ">div": {
+                display: "flex",
+                alignItems: "center",
+                padding: "30px 40px",
+                p: {
+                  margin: 0,
+                  fontSize: 30,
+                  [breakingPoints.md]: {
+                    fontSize: 18,
+                  },
+                },
+                [breakingPoints.md]: {
+                  padding: "20px 20px",
+                },
+              },
+            }}>
+            {activeTab === 0
+              ? schedule.day_1.map(item => (
+                  <div>
+                    <p css={{ whiteSpace: "nowrap" }}>
+                      {moment(item.date_and_time).format("h:mm a")}
+                    </p>
+                    <div
+                      css={{
+                        flexGrow: 1,
+                        height: 2,
+                        backgroundColor: "black",
+                        margin: "0 20px",
+                        opacity: 0.5,
+                      }}
+                    />
+                    <p>
+                      <strong>{item.text}</strong>{" "}
+                      {moment().unix() >
+                      moment(item.date_and_time)
+                        .subtract(1, "days")
+                        .unix()
+                        ? moment(item.date_and_time).fromNow()
+                        : null}
+                    </p>
+                  </div>
+                ))
+              : null}
+            {activeTab === 1
+              ? schedule.day_2.map(item => (
+                  <div>
+                    <p css={{ whiteSpace: "nowrap" }}>
+                      {moment(item.date_and_time).format("h:mm a")}
+                    </p>
+                    <div
+                      css={{
+                        flexGrow: 1,
+                        height: 2,
+                        backgroundColor: "black",
+                        margin: "0 20px",
+                        opacity: 0.5,
+                      }}
+                    />
+                    <p>
+                      <strong>{item.text}</strong>{" "}
+                      {moment().unix() >
+                      moment(item.date_and_time)
+                        .subtract(1, "days")
+                        .unix()
+                        ? moment(item.date_and_time).fromNow()
+                        : null}
+                    </p>
+                  </div>
+                ))
+              : null}
+            {activeTab === 2
+              ? schedule.day_3.map(item => (
+                  <div>
+                    <p css={{ whiteSpace: "nowrap" }}>
+                      {moment(item.date_and_time).format("h:mm a")}
+                    </p>
+                    <div
+                      css={{
+                        flexGrow: 1,
+                        height: 2,
+                        backgroundColor: "black",
+                        margin: "0 20px",
+                        opacity: 0.5,
+                      }}
+                    />
+                    <p>
+                      <strong>{item.text}</strong>{" "}
+                      {moment().unix() >
+                      moment(item.date_and_time)
+                        .subtract(1, "days")
+                        .unix()
+                        ? moment(item.date_and_time).fromNow()
+                        : null}
+                    </p>
+                  </div>
+                ))
+              : null}
           </div>
         </div>
       </section>

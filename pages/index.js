@@ -13,7 +13,15 @@ export default function IndexPage({ doc: { data }, footerData }) {
     <div css={{ overflowX: "hidden" }}>
       <Seo data={data} />
       {data.body.map((element, index) => (
-        <SliceResolver key={`slice-${index}`} {...element} />
+        <SliceResolver
+          key={`slice-${index}`}
+          {...element}
+          schedule={
+            element.slice_type === "schedule"
+              ? { day_1: data.day_1, day_2: data.day_2, day_3: data.day_3 }
+              : false
+          }
+        />
       ))}
       <Footer footerData={footerData} />
     </div>
