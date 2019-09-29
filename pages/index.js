@@ -9,6 +9,24 @@ import Seo from "../components/Seo"
 
 export default function IndexPage({ doc: { data }, footerData }) {
   console.log(data)
+
+  const form = async () => {
+    console.log("ran")
+    const res = await fetch(
+      "http://localhost:5001/askify-bd6a7/us-central1/webApi/api/v1",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "api-key": "o6w3IXEXgzWF8hB0FB7O",
+        },
+        body: JSON.stringify({ name: "Name", question: "Question" }),
+      },
+    )
+    console.log("submit", res)
+  }
+
+  form()
   return (
     <div css={{ overflowX: "hidden" }}>
       <Seo data={data} />
