@@ -21,6 +21,7 @@ export default function Button({ text, link, glow, type = "default" }) {
         transition: "400ms",
         fontSize: "1.3rem",
         fontWeight: 500,
+        textAlign: "center",
         "&:hover": {
           backgroundColor: styles[type].textColor,
           color: "white",

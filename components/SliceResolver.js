@@ -4,6 +4,7 @@ import ScheduleSlice from "../slices/ScheduleSlice"
 import VideoSlice from "../slices/VideoSlice"
 import GallerySlice from "../slices/GallerySlice"
 import SpeakersSlice from "../slices/SpeakersSlice"
+import QuestionSlice from "../slices/QuestionSlice"
 
 export default function SliceResolver({ slice_type, ...rest }) {
   switch (slice_type) {
@@ -19,6 +20,8 @@ export default function SliceResolver({ slice_type, ...rest }) {
       return <GallerySlice {...rest} />
     case "speakers":
       return <SpeakersSlice {...rest} />
+    case "question":
+      return <QuestionSlice {...rest} />
     default:
       return <div />
   }

@@ -137,7 +137,7 @@ export default function LandingCountDownSlice({ primary, items, ...rest }) {
         background: `linear-gradient(
           rgba(0, 0, 0, 0.4), 
           rgba(0, 0, 0, 0.4)
-        ), url(${primary.image.url}), url(/static/background.jpg)`,
+        ), url(${primary.image.url})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         minHeight: "100vh",

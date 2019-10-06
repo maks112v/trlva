@@ -4,7 +4,6 @@ import { colors, breakingPoints } from "../components/Styles"
 import moment from "moment"
 
 export default function ScheduleSlice({ primary, items, schedule }) {
-  console.log(schedule)
   const [activeTab, setactiveTab] = useState(0)
   return (
     <div css={{ backgroundColor: "#F3F3F3" }}>
