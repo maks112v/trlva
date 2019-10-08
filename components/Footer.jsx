@@ -9,6 +9,9 @@ export default function Footer({ footerData: { data } }) {
         position: "relative",
         paddingTop: 200,
         background: `url(/static/grid.svg), ${colors.dark}`,
+        [breakingPoints.md]: {
+          paddingBottom: 100,
+        },
       }}>
       <img
         src="/static/bottom_accent.svg"
@@ -41,7 +44,7 @@ export default function Footer({ footerData: { data } }) {
               padding: "0px 5px",
             },
             a: {
-              marginBottom: 5,
+              marginBottom: 10,
               fontSize: "1.1rem",
               textDecoration: "none",
             },
@@ -86,7 +89,7 @@ export default function Footer({ footerData: { data } }) {
                 },
               },
             }}>
-            <img src={data.logo.url} css={{ height: 100 }} />
+            <img src={data.logo.url} css={{ height: 100, marginBottom: 25 }} />
             {RichText.render(data.content)}
           </div>
           <div css={{ display: "flex", flexDirection: "column" }}>
@@ -144,10 +147,7 @@ export default function Footer({ footerData: { data } }) {
             <a href="https://relayma.com/" target="_blank">
               RelayMA
             </a>
-            . All Rights Reserved. Like our custom website?{" "}
-            <a href="https://www.relayma.com/portfolio/" target="_blank">
-              Check out our other work.
-            </a>
+            . All Rights Reserved.
           </p>
         </div>
       </div>
