@@ -19,7 +19,6 @@ export default function QuestionSlice({ primary, items, ...rest }) {
       },
       body: JSON.stringify({ name, question }),
     }).then(res => {
-      console.log(res)
       setisLoading(false)
       setname("")
       setquestion("")

@@ -8,7 +8,6 @@ import Footer from "../components/Footer"
 import Seo from "../components/Seo"
 
 export default function IndexPage({ doc: { data }, footerData }) {
-  console.log(data)
   return (
     <div css={{ overflowX: "hidden" }}>
       <Seo data={data} />
