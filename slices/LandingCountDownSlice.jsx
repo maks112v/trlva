@@ -142,6 +142,9 @@ export default function LandingCountDownSlice({ primary, items, ...rest }) {
         backgroundPosition: "center",
         height: "100vh",
         position: "relative",
+        [breakingPoints.xl]: {
+          height: "95vh !important",
+        },
         [breakingPoints.md]: {
           height: "85vh !important",
         },
