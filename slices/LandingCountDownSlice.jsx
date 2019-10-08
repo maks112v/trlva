@@ -143,7 +143,7 @@ export default function LandingCountDownSlice({ primary, items, ...rest }) {
         height: "100vh",
         position: "relative",
         [breakingPoints.md]: {
-          minHeight: "90vh !important",
+          height: "85vh !important",
         },
       }}>
       <div
