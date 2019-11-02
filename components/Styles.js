@@ -8,13 +8,13 @@ import {
 } from "react-icons/fi"
 
 export const colors = {
-  accent: "#03A9F4",
+  accent: "#4CAF50",
   dark: "#212121",
 
   text: {
     light: "#fff",
     dark: "#212121",
-    accent: "#03A9F4",
+    accent: "#4CAF50",
   },
 }
 
