@@ -37,6 +37,7 @@ export default function Seo({ data }) {
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="mobile-web-app-capable" content="yes" />
+      <link rel="manifest" href="/static/manifest.json" />
     </Head>
   )
 }
