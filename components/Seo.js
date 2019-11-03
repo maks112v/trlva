@@ -33,6 +33,10 @@ export default function Seo({ data }) {
       {image && <meta name="twitter:image" content={image} key="tw:image" />}
       <meta name="twitter:card" content="summary_large_image" key="tw:card" />
       <meta name="theme-color" content={colors.accent} />
+      <meta name="apple-mobile-web-app-title" content="trlva" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="mobile-web-app-capable" content="yes" />
     </Head>
   )
 }

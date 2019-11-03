@@ -10,15 +10,17 @@
     "moment": "^2.24.0",
     "next": "^8.0.4",
     "next-cookies": "^1.1.2",
+    "next-offline": "^4.0.6",
     "prismic-javascript": "^2.0.3",
     "prismic-reactjs": "^0.3.2",
-    "react": "^16.8.6",
     "qs": "^6.7.0",
+    "react": "^16.8.6",
     "react-animations": "^1.0.0",
     "react-countdown-now": "^2.1.1",
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0",
-    "react-images": "^1.0.0"
+    "react-images": "^1.0.0",
+    "webpack-pwa-manifest": "^4.1.1"
   },
   "devDependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.7",
