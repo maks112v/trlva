@@ -2,7 +2,6 @@ import { RichText } from "prismic-reactjs"
 import { colors, breakingPoints } from "../components/Styles"
 
 export default function ContentImageSlice({ primary, items }) {
-  console.log(primary)
   return (
     <section
       css={{
