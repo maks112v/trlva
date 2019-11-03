@@ -2,6 +2,7 @@ import { RichText } from "prismic-reactjs"
 import { colors, breakingPoints } from "../components/Styles"
 
 export default function ContentImageSlice({ primary, items }) {
+  console.log(primary)
   return (
     <section
       css={{
@@ -39,6 +40,7 @@ export default function ContentImageSlice({ primary, items }) {
             fontSize: 20,
             opacity: 0.7,
           },
+          order: primary.type === "Flipped" ? 2 : 1,
           [breakingPoints.md]: {
             order: 2,
             marginLeft: 0,
@@ -72,6 +74,7 @@ export default function ContentImageSlice({ primary, items }) {
       </div>
       <div
         css={{
+          order: primary.type === "Flipped" ? 1 : 2,
           [breakingPoints.md]: {
             order: 1,
             marginBottom: 75,
