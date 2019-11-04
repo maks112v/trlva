@@ -3,7 +3,7 @@ import Head from "next/head"
 import { RichText } from "prismic-reactjs"
 import { colors } from "./Styles"
 
-export default function Seo({ data }) {
+export default function Seo({ data, extra }) {
   const url = "https://trlva.com"
   const author = "Relay Marketing Agency"
   const handle = "@relayma"
