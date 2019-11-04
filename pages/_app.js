@@ -17,15 +17,20 @@ export default class extends App {
     const { api, ref } = await getPrismicApi(ctx)
     // const navData = await api.getSingle("nav", { ref })
     const footerData = await api.getSingle("footer", { ref })
-    return { pageProps, footerData }
+    const scheduleData = await api.getSingle("schedule", { ref })
+    return { pageProps, footerData, scheduleData }
   }
 
   render() {
-    const { Component, pageProps, footerData } = this.props
-
+    const { Component, pageProps, footerData, scheduleData } = this.props
+    console.log(scheduleData)
     return (
       <Container>
-        <Component {...pageProps} footerData={footerData} />
+        <Component
+          {...pageProps}
+          footerData={footerData}
+          scheduleData={scheduleData.data.body}
+        />
         <Styles />
       </Container>
     )

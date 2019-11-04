@@ -90,36 +90,18 @@ export default function ScheduleSlice({ primary, items, schedule }) {
                 },
               },
             }}>
-            <div
-              onClick={() => setactiveTab(0)}
-              css={{
-                borderBottom: `2px solid ${
-                  activeTab === 0 ? colors.accent : colors.dark
-                }`,
-              }}>
-              <h3>Thursday</h3>
-              <p>Nov 28, 2019</p>
-            </div>
-            <div
-              onClick={() => setactiveTab(1)}
-              css={{
-                borderBottom: `2px solid ${
-                  activeTab === 1 ? colors.accent : colors.dark
-                }`,
-              }}>
-              <h3>Friday</h3>
-              <p>Nov 29, 2019</p>
-            </div>
-            <div
-              onClick={() => setactiveTab(2)}
-              css={{
-                borderBottom: `2px solid ${
-                  activeTab === 2 ? colors.accent : colors.dark
-                }`,
-              }}>
-              <h3>Saturday</h3>
-              <p>Nov 30, 2019</p>
-            </div>
+            {schedule.map((item, index) => (
+              <div
+                onClick={() => setactiveTab(index)}
+                css={{
+                  borderBottom: `2px solid ${
+                    activeTab === index ? colors.accent : colors.dark
+                  }`,
+                }}>
+                <h3>{RichText.asText(item.primary.name)}</h3>
+                <p>{moment(item.primary.date).format("MMM DD, YYYY")}</p>
+              </div>
+            ))}
           </div>
           <div
             css={{
@@ -139,88 +121,31 @@ export default function ScheduleSlice({ primary, items, schedule }) {
                 },
               },
             }}>
-            {activeTab === 0
-              ? schedule.day_1.map(item => (
-                  <div>
-                    <p css={{ whiteSpace: "nowrap" }}>
-                      {moment(item.date_and_time).format("h:mm a")}
-                    </p>
-                    <div
-                      css={{
-                        flexGrow: 1,
-                        height: 2,
-                        backgroundColor: "black",
-                        margin: "0 20px",
-                        opacity: 0.5,
-                      }}
-                    />
-                    <p>
-                      <strong>{item.text}</strong>{" "}
-                      {moment().unix() >
-                      moment(item.date_and_time)
-                        .subtract(1, "days")
-                        .unix()
-                        ? moment(item.date_and_time).fromNow()
-                        : null}
-                    </p>
-                  </div>
-                ))
-              : null}
-            {activeTab === 1
-              ? schedule.day_2.map(item => (
-                  <div>
-                    <p css={{ whiteSpace: "nowrap" }}>
-                      {moment(item.date_and_time).format("h:mm a")}
-                    </p>
-                    <div
-                      css={{
-                        flexGrow: 1,
-                        height: 2,
-                        backgroundColor: "black",
-                        margin: "0 20px",
-                        opacity: 0.5,
-                        minWidth: 30,
-                      }}
-                    />
-                    <p>
-                      <strong>{item.text}</strong>{" "}
-                      {moment().unix() >
-                      moment(item.date_and_time)
-                        .subtract(1, "days")
-                        .unix()
-                        ? moment(item.date_and_time).fromNow()
-                        : null}
-                    </p>
-                  </div>
-                ))
-              : null}
-            {activeTab === 2
-              ? schedule.day_3.map(item => (
-                  <div>
-                    <p css={{ whiteSpace: "nowrap" }}>
-                      {moment(item.date_and_time).format("h:mm a")}
-                    </p>
-                    <div
-                      css={{
-                        flexGrow: 1,
-                        height: 2,
-                        backgroundColor: "black",
-                        margin: "0 20px",
-                        opacity: 0.5,
-                      }}
-                    />
-                    <p>
-                      <strong>{item.text}</strong>{" "}
-                      {moment().unix() >
-                      moment(item.date_and_time)
-                        .subtract(1, "days")
-                        .unix()
-                        ? moment(item.date_and_time).fromNow()
-                        : null}
-                    </p>
-                  </div>
-                ))
-              : null}
+            {schedule[activeTab].items.map(item => (
+              <div>
+                <p css={{ whiteSpace: "nowrap" }}>
+                  {moment(item.date_and_time).format("h:mm a")}
+                </p>
+                <div
+                  css={{
+                    flexGrow: 1,
+                    height: 2,
+                    backgroundColor: "black",
+                    margin: "0 20px",
+                    opacity: 0.5,
+                  }}
+                />
+                <p>
+                  <strong>{item.name}</strong>{" "}
+                  {moment().unix() >
+                  moment(item.date_and_time)
+                    .subtract(1, "days")
+                    .unix()
+                    ? moment(item.date_and_time).fromNow()
+                    : null}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
