@@ -4,14 +4,17 @@ import { colors, breakingPoints } from "../components/Styles"
 import moment from "moment"
 
 export default function ScheduleSlice({ primary, items, schedule }) {
+  const isFullPage = primary.type === "full-page"
+  console.log(isFullPage)
+
   const [activeTab, setactiveTab] = useState(0)
   return (
-    <div css={{ backgroundColor: "#F3F3F3" }}>
+    <div css={{ backgroundColor: isFullPage ? "inherit" : "#F3F3F3" }}>
       <section
         css={{
           maxWidth: 1240,
           padding: "100px 20px 50px",
-          margin: "150px auto",
+          margin: isFullPage ? "0 auto" : "150px auto",
         }}>
         <div
           css={{
