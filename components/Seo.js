@@ -69,7 +69,8 @@ export default function Seo({ data, extra }) {
       />
       <meta
         name="apple-mobile-web-app-status-bar-style"
-        content="black-translucent"></meta>
+        content="black-translucent"
+      />
       <meta name="theme-color" content="#ffffff" />
     </Head>
   )
