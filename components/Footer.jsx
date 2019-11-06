@@ -14,7 +14,7 @@ export default function Footer({ footerData: { data } }) {
         },
       }}>
       <img
-        src="/static/bottom_accent.svg"
+        src="/static/bottom_accent.svg?v=3"
         css={{
           position: "absolute",
           top: -3,
