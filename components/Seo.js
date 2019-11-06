@@ -67,6 +67,9 @@ export default function Seo({ data, extra }) {
         name="msapplication-config"
         content="/static/favicon/browserconfig.xml?v=RymJjrwd7z"
       />
+      <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent"></meta>
       <meta name="theme-color" content="#ffffff" />
     </Head>
   )

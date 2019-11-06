@@ -44,6 +44,9 @@ export default function Styles() {
         }
 
         body {
+          -webkit-user-select: none;
+          -webkit-tap-highlight-color: transparent;
+          -webkit-touch-callout: none;
           font-family: "Rubik", sans-serif;
         }
 
