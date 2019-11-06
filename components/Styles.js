@@ -13,6 +13,7 @@ export const colors = {
   darkish: "#212E33",
   text: {
     light: "#fff",
+    muted: "#FCF8F4",
     dark: "#212121",
     accent: "#4CAF50",
   },
@@ -44,10 +45,23 @@ export default function Styles() {
         }
 
         body {
+          background-color: ${colors.darkish};
           -webkit-user-select: none;
           -webkit-tap-highlight-color: transparent;
           -webkit-touch-callout: none;
           font-family: "Rubik", sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+          color: ${colors.text.light} !important;
+        }
+
+        p {
+          color: ${colors.text.muted};
         }
 
         a {

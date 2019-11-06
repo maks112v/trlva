@@ -23,7 +23,6 @@ export default class extends App {
 
   render() {
     const { Component, pageProps, footerData, scheduleData } = this.props
-    console.log(scheduleData)
     return (
       <Container>
         <Component
