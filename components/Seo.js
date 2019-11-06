@@ -71,9 +71,6 @@ export default function Seo({ data, extra }) {
         name="apple-mobile-web-app-status-bar-style"
         content="black-translucent"
       />
-      <link
-        rel="apple-touch-startup-image"
-        href="/static/favicon/splash-loading.png"></link>
       <meta name="theme-color" content="#ffffff" />
     </Head>
   )
