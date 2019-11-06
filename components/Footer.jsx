@@ -8,7 +8,7 @@ export default function Footer({ footerData: { data } }) {
         backgroundColor: colors.dark,
         position: "relative",
         paddingTop: 200,
-        background: `url(/static/grid.svg?v=2), ${colors.dark}`,
+        background: `url(/static/grid.svg?v=3), ${colors.dark}`,
         [breakingPoints.md]: {
           paddingBottom: 100,
         },

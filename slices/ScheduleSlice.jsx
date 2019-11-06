@@ -8,7 +8,7 @@ export default function ScheduleSlice({ primary, items, schedule }) {
   const isFullPage = primary.type === "full-page"
   const [activeTab, setactiveTab] = useState(0)
   return (
-    <div css={{ backgroundColor: isFullPage ? "inherit" : "#212121" }}>
+    <div css={{ backgroundColor: isFullPage ? "inherit" : colors.darkish }}>
       <section
         css={{
           maxWidth: 1240,

@@ -45,7 +45,7 @@ export default function Styles() {
         }
 
         body {
-          background-color: ${colors.darkish};
+          background-color: ${colors.dark};
           -webkit-user-select: none;
           -webkit-tap-highlight-color: transparent;
           -webkit-touch-callout: none;

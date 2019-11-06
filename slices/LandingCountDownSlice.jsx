@@ -230,7 +230,7 @@ export default function LandingCountDownSlice({ primary, items, ...rest }) {
           left: -3,
           width: "105%",
         }}
-        src="/static/accent.svg?v=2"></img>
+        src="/static/accent.svg?v=3"></img>
     </header>
   )
 }
