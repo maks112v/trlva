@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { RichText } from "prismic-reactjs"
 import { colors, breakingPoints } from "../components/Styles"
 import moment from "moment"
-import Button from "../components/Button"
 
 export default function ScheduleSlice({ primary, items, schedule }) {
   const isFullPage = primary.type === "full-page"
+  console.log(isFullPage)
+
   const [activeTab, setactiveTab] = useState(0)
   return (
-    <div css={{ backgroundColor: isFullPage ? "inherit" : colors.darkish }}>
+    <div css={{ backgroundColor: isFullPage ? "inherit" : "#F3F3F3" }}>
       <section
         css={{
           maxWidth: 1240,
@@ -132,7 +133,7 @@ export default function ScheduleSlice({ primary, items, schedule }) {
                   css={{
                     flexGrow: 1,
                     height: 2,
-                    backgroundColor: colors.text.muted,
+                    backgroundColor: "black",
                     margin: "0 20px",
                     opacity: 0.5,
                   }}
