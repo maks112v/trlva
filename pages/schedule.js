@@ -5,6 +5,8 @@ import { getPrismicApi } from "../prismic"
 import SliceResolver from "../components/SliceResolver"
 import Footer from "../components/Footer"
 import Seo from "../components/Seo"
+import Button from "../components/Button"
+import Link from "next/link"
 
 export default function SchedulePage({
   doc: { data },
@@ -21,6 +23,11 @@ export default function SchedulePage({
           schedule={element.slice_type === "schedule" ? scheduleData : false}
         />
       ))}
+      <div css={{ margin: "20px 0", textAlign: "center" }}>
+        <Link href="/" passHref>
+          <Button text="Back"></Button>
+        </Link>
+      </div>
       <Footer footerData={footerData} />
     </div>
   )

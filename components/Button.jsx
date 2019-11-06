@@ -6,10 +6,10 @@ const styles = {
   },
 }
 
-export default function Button({ text, link, glow, type = "default" }) {
+export default function Button({ text, href, glow, type = "default" }) {
   return (
     <a
-      href={link}
+      href={href}
       css={{
         backgroundColor: "transparent",
         padding: "10px 30px",

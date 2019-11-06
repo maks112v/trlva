@@ -10,7 +10,7 @@ import {
 export const colors = {
   accent: "#4CAF50",
   dark: "#212121",
-
+  darkish: "#212E33",
   text: {
     light: "#fff",
     dark: "#212121",

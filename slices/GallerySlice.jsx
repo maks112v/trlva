@@ -89,7 +89,7 @@ export default function GallerySlice({ primary, items }) {
         <div css={{ textAlign: "center" }}>
           <Button
             text={RichText.asText(primary.button_text)}
-            link={primary.button_link}
+            href={primary.button_link}
             glow
           />
         </div>

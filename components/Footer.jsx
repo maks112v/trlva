@@ -124,7 +124,7 @@ export default function Footer({ footerData: { data } }) {
                   target="_blank"
                   href={item.link.url}
                   css={{
-                    backgroundColor: colors.accent,
+                    backgroundColor: colors.darkish,
                     padding: "10px 20px",
                     opacity: 1,
                     borderRadius: 30,

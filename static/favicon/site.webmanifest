@@ -1,6 +1,7 @@
 {
   "name": "The Rooted Life",
   "short_name": "trlva",
+  "start_url": "/schedule",
   "icons": [
     {
       "src": "/static/favicon/android-chrome-192x192.png?v=RymJjrwd7z",
