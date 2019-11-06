@@ -14,7 +14,6 @@ export default function Seo({ data, extra }) {
 
   return (
     <Head>
-      <link rel="icon" type="image/x-icon" href="/static/favicon.png" />
       {title && <title key="title">{title}</title>}
       {title && <meta name="title" content={title} key="meta:title" />}
       {author && <meta name="author" content={author} key="meta:author" />}
@@ -33,11 +32,42 @@ export default function Seo({ data, extra }) {
       {image && <meta name="twitter:image" content={image} key="tw:image" />}
       <meta name="twitter:card" content="summary_large_image" key="tw:card" />
       <meta name="theme-color" content={colors.accent} />
-      <meta name="apple-mobile-web-app-title" content="trlva" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <link rel="manifest" href="/static/manifest.json" />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/static/favicon/apple-touch-icon.png?v=RymJjrwd7z"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/static/favicon/favicon-32x32.png?v=RymJjrwd7z"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/static/favicon/favicon-16x16.png?v=RymJjrwd7z"
+      />
+      <link
+        rel="manifest"
+        href="/static/favicon/site.webmanifest?v=RymJjrwd7z"
+      />
+      <link
+        rel="mask-icon"
+        href="/static/favicon/safari-pinned-tab.svg?v=RymJjrwd7z"
+        color="#212e33"
+      />
+      <link
+        rel="shortcut icon"
+        href="/static/favicon/favicon.ico?v=RymJjrwd7z"
+      />
+      <meta name="msapplication-TileColor" content="#212e33" />
+      <meta
+        name="msapplication-config"
+        content="/static/favicon/browserconfig.xml?v=RymJjrwd7z"
+      />
+      <meta name="theme-color" content="#ffffff" />
     </Head>
   )
 }
