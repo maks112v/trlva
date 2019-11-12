@@ -3,10 +3,22 @@ import { colors } from "./Styles"
 const styles = {
   default: {
     textColor: colors.text.accent,
+    hoverColor: colors.text.light,
+  },
+  light: {
+    textColor: colors.text.light,
+    hoverColor: colors.text.accent,
   },
 }
 
-export default function Button({ text, href, glow, type = "default" }) {
+export default function Button({
+  text,
+  href,
+  glow,
+  style,
+  type = "default",
+  ...rest
+}) {
   return (
     <a
       href={href}
@@ -24,11 +36,13 @@ export default function Button({ text, href, glow, type = "default" }) {
         textAlign: "center",
         "&:hover": {
           backgroundColor: styles[type].textColor,
-          color: "white",
+          color: styles[type].hoverColor,
           border: `2px solid ${styles[type].textColor}`,
           boxShadow: glow && `0px 11px 29px 0px rgba(3,169,244,.2)`,
         },
-      }}>
+        ...style,
+      }}
+      {...rest}>
       {text}
     </a>
   )
