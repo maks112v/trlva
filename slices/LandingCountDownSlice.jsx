@@ -25,7 +25,10 @@ const CountDown = ({
             bottom: -30,
           },
         }}>
-        <a href="https://forms.gle/QeKGhkY7wVcv3d3bA" target="_blank">
+        <a
+          href="https://forms.gle/QeKGhkY7wVcv3d3bA"
+          css={{ textDecoration: "none" }}
+          target="_blank">
           <div
             css={{
               backgroundColor: colors.accent,
@@ -37,6 +40,10 @@ const CountDown = ({
               transition: "200ms",
               [breakingPoints.lg]: {
                 padding: "20px 25px 30px",
+              },
+              "&:hover": {
+                textDecoration: "none",
+                backgroundColor: `#212E33`,
               },
             }}>
             <div
