@@ -141,9 +141,10 @@ export default function ScheduleSlice({ primary, items, schedule }) {
                 <p>
                   <strong>{item.name}</strong>{" "}
                   {moment().unix() >
-                  moment(item.date_and_time)
-                    .subtract(1, "days")
-                    .unix()
+                    moment(item.date_and_time)
+                      .subtract(1, "days")
+                      .unix() &&
+                  moment(item.date_and_time).unix() > moment().unix()
                     ? moment(item.date_and_time).fromNow()
                     : null}
                 </p>
