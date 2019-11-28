@@ -84,7 +84,6 @@ const CountDown = ({
                   lineHeight: 1.2,
                   margin: 0,
                   marginTop: 10,
-                  marginRight: 20,
                   color: colors.text.light,
                   [breakingPoints.lg]: {
                     fontSize: 24,
