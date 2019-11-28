@@ -5,7 +5,6 @@ import moment from "moment"
 
 export default function ScheduleSlice({ primary, items, schedule }) {
   const isFullPage = primary.type === "full-page"
-  console.log(isFullPage)
 
   const [activeTab, setactiveTab] = useState(0)
   return (
