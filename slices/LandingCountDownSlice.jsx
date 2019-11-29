@@ -96,7 +96,7 @@ const CountDown = ({
                     fontSize: 24,
                   },
                 }}>
-                Submit&nbsp;a&nbsp;Question?
+                Submit&nbsp;a&nbsp;Question
               </h2>
             </div>
           </div>
