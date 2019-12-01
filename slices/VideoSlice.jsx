@@ -106,11 +106,12 @@ export default function VideoSlice({ primary, items }) {
                 marginTop: -80,
                 marginLeft: -30,
                 position: "absolute",
-                fontSize: 120,
+                fontSize: 100,
                 color: colors.text.light,
                 opacity: 0.2,
                 whiteSpace: "nowrap",
                 [breakingPoints.md]: {
+                  whiteSpace: "normal",
                   fontSize: 50,
                   marginTop: -30,
                   marginLeft: -10,
